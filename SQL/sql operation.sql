@@ -1,6 +1,6 @@
  -- 1. To create a database and tables with minimum 10 field requirements for your own project, 
  -- and then insert a minimum 10 records and use the constraints.
-create database claysys
+create database claysys;
 use claysys;
 CREATE TABLE my_table (
     id INT PRIMARY KEY,
