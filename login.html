@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="login.css">
+<script>
+      function formvalidate(){
+          
+          var password=document.getElementById('password').value.trim();
+          var email=document.getElementById("email").value;
+          var email_pattern=/^[\w\+\'\.-]+@[\w\'\.-]+\.[a-zA-Z]{2,}$/;
+          
+          
+          if(email==""){
+              document.getElementById('email_error').style.display = "block";
+
+              document.getElementById('email_error').innerHTML="**Please Enter  Email";
+              return false;
+            }
+                if(email!="" && email_pattern.test(email)==false){
+
+              document.getElementById('email_error').style.display = "block";
+              document.getElementById('email_error').innerHTML = "Invalid Email id";
+              return false;
+          }
+          else{
+              document.getElementById('email_error').style.display = "none";
+          }
+          
+          if(password=="")
+            {
+                document.getElementById('password_error').style.display="block";
+                document.getElementById('password_error').innerHTML="**Please Enter password";
+                return false;
+            } 
+            if(password.length>8||password.length<8){
+                document.getElementById('password_error').style.display="block";
+                document.getElementById('password_error').innerHTML="**Enter 8 digit valid Code";
+                return false;
+            }
+            else{
+                document.getElementById('password_error').style.display="none";
+                
+                return true;
+                
+            }
+      }
+      function openLForm() {
+
+           document.getElementById("popupLForm").style.display = "block";
+                
+        }
+        function closeLForm() {
+          document.getElementById("popupLForm").style.display = "none";
+        }
+
+ </script>
+
+</head>
+<body>
+
+<header>
+  <h2> 
+    <div class="logo"> <img src="2.jpg" alt="logo" width="50px" height="50px">
+    </div>
+      
+  </h2>
+  <div class="tag">
+      <a href="index.html" tex>Home</a>
+      <a href="login.html" tex>Login</a>
+      <a href="signup.html">Sign up</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>  
+</header>
+    <form onsubmit="return formvalidate()">
+        <div class="container">
+          <h3>Login here</h3>
+          <input type="text" placeholder="Enter Email" id="email" name="uname" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+          <span id="email_error" style="color: red;"></span>
+      
+          <input type="password" placeholder="Enter Password" id="password" name="psw" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+          <span id="password_error" style="color: red;"></span>
+      
+          <button type="submit" onclick="openLForm()">Login</button>
+          <button type="button" onclick="closeLForm()">Close</button>
+        </div>
+      
+       
+    </form>
+    <div class="loginPopup">
+      <div class="formPopup" id="popupLForm">
+      <h4>Login Successfull</h4>
+
+      </div>
+    </div>
+<footer>
+  <p>copyright@2023</p>
+</footer>
+
+</body>
+
+</html>
+

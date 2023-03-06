@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+   function formvalidate()
+   {
+      
+    var a=document.getElementById("nme").value.trim();
+
+    var p=/^[a-zA-Z^\s]+$/;
+       if(a=="")
+        {
+            document.getElementById('fns').style.display = "block";
+
+            document.getElementById('fns').innerHTML="**Please Enter  First Name";
+            return false;
+        }
+
+    if (/[^a-zA-Z^\s]/.test(a))
+    {
+        document.getElementById('fns').style.display="block";
+        document.getElementById('fns').innerHTML="**Only Alphabets Allowed";
+        return false;
+    }
+       else{
+           document.getElementById('fns').style.display = "none";
+          
+       }
+    var b=document.getElementById("lnme").value;
+       if(b=="")
+{
+    document.getElementById('kn').style.display = "block";
+
+    document.getElementById('kn').innerHTML="**Please Enter  Last Name";
+    return false;
+}
+    if (/[^a-zA-Z^\s]/.test(b))
+    {
+        document.getElementById('kn').style.display="block";
+        document.getElementById('kn').innerHTML="**Only Alphabets Allowed";
+        return false;
+    }
+       else{
+           document.getElementById('kn').style.display = "none";          
+       }
+       var inputDate = new Date(document.getElementById("dob").value); // get the input date value
+      var currentDate = new Date();
+var  minDate = new Date(currentDate.getFullYear() - 1, currentDate.getMonth(), currentDate.getDate());
+var errorSpan = document.getElementById("dd"); // get the error span element
+
+if (document.getElementById("dob").value === "") { // check if the input date is empty
+  errorSpan.innerHTML = "Please select a date";
+  errorSpan.style.display = "block";
+  return false;
+} else if (inputDate > minDate) { // check if the input date is not in the future
+  errorSpan.innerHTML = "Please enter a date in the past";
+  errorSpan.style.display = "block";
+  return false;
+} else {
+  errorSpan.innerHTML = ""; // clear the error message if the date is valid
+  errorSpan.style.display = "none";
+  
+}
+
+
+       var phq = document.getElementById("phl").value;
+       var exprs = /^[6-9]\d{9}$/;
+       if(phq=="")
+{
+    document.getElementById('pp').style.display = "block";
+
+    document.getElementById('pp').innerHTML="**Please Enter  phone";
+    return false;
+}
+       if(phq!="" && exprs.test(phq)==false){
+           document.getElementById('pp').style.display = "block";
+           document.getElementById('pp').innerHTML = "Invalid Phone number";
+           return false;
+                   }
+                   else{
+           document.getElementById('pp').style.display = "none";
+           
+       }
+       var aa=document.getElementById("eemail").value;
+       var stt=/^[\w\+\'\.-]+@[\w\'\.-]+\.[a-zA-Z]{2,}$/;
+       if(aa=="")
+{
+    document.getElementById('ela').style.display = "block";
+
+    document.getElementById('ela').innerHTML="**Please Enter  Email";
+    return false;
+}
+       if(aa!="" && stt.test(aa)==false){
+
+           document.getElementById('ela').style.display = "block";
+           document.getElementById('ela').innerHTML = "Invalid Email id";
+           return false;
+       }
+       else{
+           document.getElementById('ela').style.display = "none";
+       }
+       var ee=document.getElementById('hnamee').value.trim();
+       if(ee=="")
+    {
+        document.getElementById('hho').style.display="block";
+        document.getElementById('hho').innerHTML="**Please Enter House Name";
+        return false;
+    }else{
+        document.getElementById('hho').style.display = "none";
+       }
+       var ff=document.getElementById('strename').value.trim();
+       if(ff=="")
+    {
+        document.getElementById('sss').style.display="block";
+        document.getElementById('sss').innerHTML="**Please Enter Street Name";
+        return false;
+    }else{
+        document.getElementById('sss').style.display = "none";
+       }
+       var gg=document.getElementById('cityname').value.trim();
+       if(gg=="")
+    {
+        document.getElementById('kkk').style.display="block";
+        document.getElementById('kkk').innerHTML="**Please Enter City Name";
+        return false;
+    }else{
+        document.getElementById('kkk').style.display = "none";
+       }
+
+
+
+       var ab=document.getElementById("usenamee").value.trim();
+
+       var yb=/^[a-zA-Z^\s]+$/;
+   if(ab=="")
+    {
+        document.getElementById('skyy').style.display = "block";
+
+        document.getElementById('skyy').innerHTML="**Please enter user name";
+        return false;
+    }
+
+if (/[^a-zA-Z^\s]/.test(ab))
+{
+    document.getElementById('skyy').style.display="block";
+    document.getElementById('skyy').innerHTML="**Only Alphabets Allowed";
+    return false;
+}
+   else{
+       document.getElementById('skyy').style.display = "none";
+      
+   }
+       var ggg=document.getElementById('pcode').value.trim();
+       if(ggg=="")
+        {
+            document.getElementById('mmm').style.display="block";
+            document.getElementById('mmm').innerHTML="**Please Enter password";
+            return false;
+        } 
+        if(ggg.length>8||ggg.length<8){
+            document.getElementById('mmm').style.display="block";
+            document.getElementById('mmm').innerHTML="**Enter 8 digit valid Code";
+            return false;
+        }
+        else{
+            document.getElementById('mmm').style.display="none";
+        }
+        var ee=document.getElementById('cpassword').value.trim();
+
+                 if(ggg!=ee)
+                   {
+                       document.getElementById('cpss').style.display = "block";
+   
+                       document.getElementById('cpss').innerHTML="**Incorrect Password";
+                       return false;
+                   }
+                           else
+                             {
+                                 document.getElementById('cpss').style.display = "none";
+                       return true;
+                   }
+   }
+   function openLForm() {
+
+document.getElementById("popupLForm").style.display = "block";
+     
+}
+function closeLForm() {
+document.getElementById("popupLForm").style.display = "none";
+}
+   </script>
+</head>
+
+<body>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+
+<header>
+  <h2> 
+    <div class="logo"> <img src="2.jpg" alt="logo" width="50px" height="50px">
+    </div>
+      
+  </h2>
+  <div class="tag">
+    <a href="index.html" tex>Home</a>
+      <a href="login.html" tex>Login</a>
+      <a href="#news">Sign up</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>  
+</header>
+    <form method="post" onsubmit="return formvalidate();">
+
+        <div class="container">
+                      <center> <h2> Sign up </h2> </center>
+                        
+                        <!-- <label>First name : </label>    -->
+                        <input type="text" id="nme" name="fname" class="text-field" placeholder="First Name"  onblur="return formvalidate()" onKeyUp="return formvalidate()">
+                        <span id="fns" style="color: red;"></span>
+                       
+                    
+                        
+                        <input type="text" id="lnme"  name="lname" class="text-field" placeholder="Last Name"  onblur="return formvalidate()" onKeyUp="return formvalidate()" >
+                        <span id="kn" style="color: red;"></span>
+                   
+                        
+                        <input type="text"name="uname" width="100%" id="dob"  onchange="return formvalidate()"  placeholder="Date of birth" onfocus="(this.type='date')"><br>
+                        <span id="dd" style="color: red;"></span>
+                        <label for="psw"><b>Gender:</b></label>
+                        <label for="psw"><b>male</b></label>
+                        <input type="radio" name="psw"  required>
+                        <label for="psw"><b>female</b></label>
+                        <input type="radio" name="psw" ><br>
+                    
+                        
+                        <input type="text" id="phl" name="phone" class="text-field" minlength="10" maxlength="10" placeholder="Phone"  onblur="return formvalidate()" onKeyUp="return formvalidate()" >
+                        <span id="pp" style="color: red;"></span>
+                    
+                        
+                        <input type="text" id="eemail" name="email" class="text-field" placeholder="Email"  onblur="return formvalidate()" onKeyUp="return formvalidate()">
+                        <span id="ela" style="color: red;"></span>
+                   
+                        <input type="text" id="hnamee" name="hname" class="text-field" placeholder="House Name" onblur="return formvalidate()" onKeyUp="return formvalidate()" >
+                        <span id="hho" style="color: red;"></span>
+
+                        <input type="text" id="strename" name="street" class="text-field" placeholder="Street" onblur="return formvalidate()" onKeyUp="return formvalidate()"  >
+                        <span id="sss" style="color: red;"></span>
+
+                        <input type="text" id="cityname"  name="city" class="text-field" placeholder="City"  onblur="return formvalidate()" onKeyUp="return formvalidate()" >
+                        <span id="kkk" style="color: red;"></span>
+
+                        <input type="text" id="usenamee" name="user" class="text-field" placeholder="First username" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+                        <span id="skyy" style="color: red;"></span>
+                    
+                        <input type="password" id="pcode" class="text-field" name="password" placeholder="Password" minlength="8" maxlength="8" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+                        <span id="mmm" style="color: red;"></span>                   
+
+                        <input type="password" id="cpassword" class="text-field" name="cpassword" placeholder="Conform Password" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+                        <span id="cpss" style="color: red;"></span>
+
+                        <button type="submit" onclick="openLForm()">Submit</button>
+                        <button type="button" onclick="closeLForm()">Close</button>
+         
+        </div>
+      
+       
+    </form>
+    <div class="loginPopup">
+        <div class="formPopup" id="popupLForm">
+         
+         <h4>Registration successful</h4> 
+        
+  
+        </div>
+      </div>
+<footer>
+  <p>copyright@2023</p>
+</footer>
+
+</body>
+
+</html>
+
