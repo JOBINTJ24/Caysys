@@ -6,7 +6,7 @@
 <script>
       function formvalidate(){
           
-          var password=document.getElementById('password').value.trim();
+          
           var email=document.getElementById("email").value;
           var email_pattern=/^[\w\+\'\.-]+@[\w\'\.-]+\.[a-zA-Z]{2,}$/;
           
@@ -25,9 +25,14 @@
           }
           else{
               document.getElementById('email_error').style.display = "none";
+              return true;
           }
           
-          if(password=="")
+          
+      }
+      function passwordform(){
+        var password=document.getElementById('password').value.trim();
+      if(password=="")
             {
                 document.getElementById('password_error').style.display="block";
                 document.getElementById('password_error').innerHTML="**Please Enter password";
@@ -44,7 +49,15 @@
                 return true;
                 
             }
-      }
+          }
+
+
+
+
+
+
+
+
       function openLForm() {
 
            document.getElementById("popupLForm").style.display = "block";
@@ -66,24 +79,29 @@
       
   </h2>
   <div class="tag">
-      <a href="index.html" tex>Home</a>
-      <a href="login.html" tex>Login</a>
+    <a href="index.html" tex>Home</a>
+      <a href="login.html" tex>Sign in</a>
       <a href="signup.html">Sign up</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-    </div>  
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div> 
 </header>
     <form onsubmit="return formvalidate()">
         <div class="container">
-          <h3>Login here</h3>
-          <input type="text" placeholder="Enter Email" id="email" name="uname" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+          <h3>Sign in</h3>
+          <input type="text" placeholder="Enter Email" id="email" name="uname" onblur="return formvalidate()" onKeyUp="return formvalidate()" onfocusout="formvalidate()">
           <span id="email_error" style="color: red;"></span>
       
-          <input type="password" placeholder="Enter Password" id="password" name="psw" onblur="return formvalidate()" onKeyUp="return formvalidate()">
+          <input type="password" placeholder="Enter Password" id="password" name="psw" onblur="return passwordform()" onfocusout="passwordform()" onKeyUp="return passwordform()">
           <span id="password_error" style="color: red;"></span>
       
           <button type="submit" onclick="openLForm()">Login</button>
           <button type="button" onclick="closeLForm()">Close</button>
+          <div class="forgot" >
+            <a href="#">forgot password</a>
+            <a href=" signup.html"tex>Sign up</a>
+        </div> 
+                        
         </div>
       
        

@@ -8,11 +8,12 @@
   
   /* Style the header */
   header {
-    background-color: #df6d22;
+    background-color: #e22828;
     padding: 2px;
     text-align: center;
     font-size: 20px;
     color: white;
+    
   }
   header h2{
       
@@ -37,11 +38,11 @@
   /* Style the footer */
   footer {
     
-    background-color: #e27328;
+    background-color:  #e22828;
     padding: 30px;
     text-align: center;
     color: white;
-    margin-top:100px;
+    margin-top:10px;
   }
   .tag{
       display: inline-block;
@@ -106,6 +107,7 @@
   /* Add padding to containers */
   .container {
     padding: 16px;
+   
   }
   
   /* The "Forgot password" text */
@@ -131,7 +133,8 @@
       width:400px;
       text-align: center;
       margin-left: 32%;
-      background-color: rgba(64, 64, 151, 0.733);
+      /* background-image: url('68.jpg'); */
+      background-color: rgb(240, 172, 151);
       margin-top:80px;
       margin-bottom:10px;
       border-radius:10px;
@@ -182,3 +185,9 @@
 
     
   }
+  .forgot{
+  
+    display: inline-block;
+      margin-right:90px;
+  }
+  

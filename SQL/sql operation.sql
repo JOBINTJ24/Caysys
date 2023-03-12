@@ -128,3 +128,8 @@ INSERT INTO student (id, name, staff) VALUES
 
 select * from student;
 
+CALL insert_staf('rahul', 29);
+CALL view_staff();
+CALL delete_staff(2);
+call edit_staff('amal ',3);
+
