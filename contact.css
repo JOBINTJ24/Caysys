@@ -1,51 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap");
+
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the header */
-  header {
-    background-color: #e22828;;
-    padding: 5px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-   
-  }
-  header h2{
-      
-      display: inline-block;
-      margin-left:-100px;
-  }
-  header a{
-      
-      display:inline-block;
-      margin-left:30px;
-      color: #fff;
-      text-decoration:none;
-  }
-  
-  img{
-    border-radius:100px;
-    margin-left: -150px;
-  }
-  
-  /* Style the footer */
-  footer {
-    
-    background-color:  #e22828;;
-    padding: 30px;
-    text-align: center;
-    color: white;
-    margin-top:15px;
-  }
-  .tag{
-      display: inline-block;
-      margin-left:500px;
-  }
-  .contact-section{
-    margin-bottom: 355px;
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #f3f3f3;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#intro-section {
+  height: 100vh;
+  width: 30%;
+  flex: 1;
+  background: linear-gradient(to right, #6894fd 0%, #7d63e8 100%);
+}
+
+#container #intro-section #side-info li {
+  list-style: none;
+}
+
+/* intro message styling */
+#intro-message {
+  padding-left: 2rem;
+}
+
+/* side settings styling */
+#side-info {
+  padding-left: 12rem;
+}
+
+/* side menu styling */
+#menu {
+  padding-left: 12rem;
+  list-style: none;
+  line-height: 3.5rem;
+}
+
+/* side panel styling */
+#side-panel {
+  height: 100vh;
+  width: 70%;
+  color: #6894fd;
+}
+
+/* side panel message styling */
+#side-panel #side-message {
+  padding-left: 2.5rem;
+}
+
+/* dro[down option styling */
+#text {
+  border: 2px solid white;
+  border-radius: 200px;
+  width: 150px;
+  height: 30px;
+}
+
+/* utility class */
+
+/* standard font size for text */
+.f-size {
+  font-size: 2.1rem;
+}
+
+/* main tile styling */
+.main-title {
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+/* color utility class */
+.primary-color {
+  color: #f3f3f3;
+}
+
+/* text align center utility class */
+.center {
+  text-align: center;
+}

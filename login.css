@@ -185,9 +185,9 @@
 
     
   }
-  .forgot{
-  
-    display: inline-block;
-      margin-right:90px;
-  }
+  .forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
   

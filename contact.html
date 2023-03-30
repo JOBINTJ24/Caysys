@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title></title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- container for the whole page -->
+    <div id="container">
+      <!-- menu section of the page -->
+      <div id="intro-section">
+        <h1 class="main-title primary-color center">Admin Panel</h1>
+        <br />
+        <h3 id="intro-message" class="f-size">
+          Hello user you have three messages
+        </h3>
+        <br />
+        <ul id="side-info" class="f-size">
+          <li><a href="#">View the Site</a></li>
 
-<link rel="stylesheet" type="text/css" href="contact.css">
-</head>                             
-<body>
+          <li><a href="#">Sign Out</a></li>
+        </ul>
+        <br />
+        <br />
 
-<header>
-  <h2> 
-   
-    <div class="logo"> <img src="2.jpg" alt="logo" width="50px" height="50px"> 
-    
+        <!-- side menu -->
+        <ul id="menu" class="f-size">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Filter Text</a></li>
+          <select name="test" id="text">
+            <option value="Ascending" class="btn">Ascending</option>
+            <option value="Descending" class="btn">Descending</option>
+          </select>
+        </ul>
+      </div>
+
+      <!-- side panel -->
+      <div id="side-panel" class="primary-color">
+        <h1 class="main-title">Welcome User</h1>
+        <br />
+        <h3 class="f-size" id="side-message">
+          What would you like to do?
+        </h3>
+      </div>
     </div>
-      
-  </h2>
-    <div class="tag">
-        <a href="index.html" tex>Home</a>
-          <a href="login.html" tex>Sign in</a>
-          <a href="signup.html">Sign up</a>
-          <a href="contact.html">Contact</a>
-          <a href="about.html">About</a>
-        </div> 
-</header>
-<div class="contact-section">
-  <h1>Contact Us Page</h1>
-</div>
-   
-<footer>
-  <p>copyright@2023</p>
-</footer>
-
-</body>
-
+  </body>
 </html>
-
